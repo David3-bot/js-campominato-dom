@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>Campo Minato</title>
+</head>
+
+<body class=" bg-dark">
+
+    <div class="container my-3">
+        <div>
+            <h1 class="text-center py-3 text-danger">Choose your Destiny:</h1>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <!--dare come value il numero x * x-->
+                <select id="nGrid">
+                    <option value="10">Easy</option>
+                    <option value="9">Standard</option>
+                    <option value="7">Hard</option>
+                    <option value="1">Dark Souls</option>
+                </select>
+                <button id="start" class="btn btn-secondary">Start</button>
+            </div>
+        </div>
+    
+    </div>
+<!--qui stampare griglie-->
+    <div class="container">
+        <div class="gridContainer d-flex flex-wrap"></div>
+    </div>
+
+
+    <script src="../javas/main.js"></script>
+</body>
+
+</html>
