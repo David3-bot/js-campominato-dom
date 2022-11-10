@@ -14,6 +14,7 @@ buttonEl.addEventListener("click", function () {
 
 
     const gridContainerEl = document.querySelector(".gridContainer");
+    gridContainerEl.innerHTML = "";
 
     //Funzione/a finalmente
 

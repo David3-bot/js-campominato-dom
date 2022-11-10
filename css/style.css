@@ -17,8 +17,6 @@ body {
 
 .cell.active {
     border: 1px solid #808080;
-}
-
-.cell.active {
     background-color: red;
 }
+
