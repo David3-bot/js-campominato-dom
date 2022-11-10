@@ -1,5 +1,24 @@
+:root {
+    --color-primary: white #808080 #808080 white;
+}
+
+
+body {
+    max-height: 100vh;
+}
+
 .cell {
-    border: 1px solid black;
+    width: 15px;
+    border: 1px var(--color-primary);
+    border-style: solid;
     aspect-ratio: 1 / 1;
-    background-color: orange;
+    background-color: #C6C6C6
+}
+
+.cell.active {
+    border: 1px solid #808080;
+}
+
+.cell.active {
+    background-color: red;
 }

@@ -1,4 +1,5 @@
 const buttonEl = document.getElementById("start");
+let bombs;
 
 //funzione griglie
 
@@ -7,12 +8,17 @@ buttonEl.addEventListener("click", function () {
     let numGrid = parseInt(options.value);
     let totalGrid = (numGrid * numGrid);
     console.log(totalGrid)
+    const level = totalGrid;
+    bombs = generateBombsList( +level );
+
+
 
     const gridContainerEl = document.querySelector(".gridContainer");
 
     //Funzione/a finalmente
 
     for (let i = 1; i <= totalGrid; i++) {
+        
         const newCell = document.createElement("div");
         gridContainerEl.append(newCell);
         newCell.style.flexBasis = 100 / numGrid + "%";
@@ -28,3 +34,37 @@ buttonEl.addEventListener("click", function () {
 
     }
 })
+
+function onCellClick () {
+    // questo è il problema
+    const numCella = newCell.textContent;
+  
+    // controllo se il numero corrisponde ad una delle bombe
+    if ( bombs.includes( numCella ) ) {
+      // badaboom
+      alert( "Game Over!" );
+    }
+  }
+
+function generateRandomNumber ( min, max ) {
+    return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
+  }
+
+function generateBombsList ( totalGrid ) {
+    const bombsList = [];
+    console.log(bombsList)
+  
+   
+    while ( bombsList.length < 16 ) {
+      
+      const num = generateRandomNumber( 1, totalGrid );
+  
+      
+      if ( !bombsList.includes( num ) ) {
+        
+        bombsList.push( num );
+      }
+    }
+  
+    return bombsList;
+  }
