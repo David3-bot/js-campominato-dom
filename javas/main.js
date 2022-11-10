@@ -38,7 +38,7 @@ buttonEl.addEventListener("click", function () {
 
 function onCellClick () {
     // questo è il problema
-    const numCella = newCell.textContent;
+    const numCella = numGrid.textContent;
   
     // controllo se il numero corrisponde ad una delle bombe
     if ( bombs.includes( numCella ) ) {
@@ -51,14 +51,14 @@ function generateRandomNumber ( min, max ) {
     return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
   }
 
-function generateBombsList ( totalGrid ) {
+function generateBombsList (level ) {
     const bombsList = [];
     console.log(bombsList)
   
    
     while ( bombsList.length < 16 ) {
       
-      const num = generateRandomNumber( 1, totalGrid );
+      const num = generateRandomNumber( 1, level );
   
       
       if ( !bombsList.includes( num ) ) {
