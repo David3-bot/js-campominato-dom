@@ -38,7 +38,7 @@ buttonEl.addEventListener("click", function () {
 
 function onCellClick () {
     // questo è il problema
-    const numCella = numGrid.textContent;
+    const numCella = parseInt (totalGrid.textContent);
   
     // controllo se il numero corrisponde ad una delle bombe
     if ( bombs.includes( numCella ) ) {
